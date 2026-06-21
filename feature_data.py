@@ -30,4 +30,5 @@ encoded_df = pd.DataFrame(encoded , columns=encoder.get_feature_names_out(['Gend
 df = pd.concat([df , encoded_df ] , axis=1 ).drop(columns = ['Gender'] )
 
 
-
+#save the new data set file
+joblib.dump(df , "data/Mall_Customers_updated.csv")
