@@ -49,6 +49,7 @@ model = RandomForestClassifier(
 rand_trained_data = model.fit(X_train_scaled , y_train)
 print(f"Validation score : {rand_trained_data.score(X_test_scaled , y_test) * 100:.2f} %")
 
+
 #Analyze the clusters 
 analysis = X_train.copy()
 analysis['Cluster'] = y_train
